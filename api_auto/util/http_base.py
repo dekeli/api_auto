@@ -40,7 +40,7 @@ class BaseHttp(object):
     def get_re(self, url, params=None):
         url = self.get_url(url)
         headers = self.header
-        response = requests.get(url, params=params, headers=headers).json()
+        response = requests.get(url, params=params, headers=headers)
         return response
 
     def post_re(self, url, body=None):
