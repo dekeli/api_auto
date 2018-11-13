@@ -23,6 +23,9 @@ class Test(unittest.TestCase):
 
     def test_get_your_request(self):
         res = self.nb_o.get_your_request(request_params=self.request_params)
+        res_code = res.status_code # 返回状态码
+        assert res_cde == 200
+        res_body = res.text # 返回内容
         print(res)
         # dict_o = self.response_o(res, 200,"jshdjshdj")
         # print(dict_o)
